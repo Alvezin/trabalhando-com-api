@@ -1,0 +1,70 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+form{
+    background-color: rgb(32, 84, 32);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+fieldset{
+    border: none;
+}
+label{
+    color: white;
+}
+input{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+button{
+    padding: 5px 10px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+.boxmodal{
+    background-color: coral;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: calc(50vw - 150px);
+    border-radius: 10px;
+    display: none;
+    animation: desaparecer 2s ;
+}
+.boxmodal.active{
+    display: block;
+    animation: aparecerModal 2s;
+}
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+body{
+    position: relative;
+}
+
+@keyframes aparecerModal {
+    0%{
+        transform: translateY(-100%);
+    }
+}
+@keyframes desaparecer {
+    0%{
+        transform: translateY(110%);
+    }
+}
